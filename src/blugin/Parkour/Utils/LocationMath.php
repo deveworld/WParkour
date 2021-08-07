@@ -19,6 +19,16 @@ class LocationMath {
      * @param bool   $level set location Level with parkour World Level
      */
     public static function goToLastCheckpoint(Player $player, bool $level = false) {
+        $player->teleport(self::getLastCheckPoint($player, $level));
+    }
+
+    /**
+     * @param Player $player
+     * @param bool   $level
+     *
+     * @return Location
+     */
+    public static function getLastCheckPoint(Player $player, bool $level = false): Location {
         $playerData = Parkour::getData($player);
         $parkour = Parkour::getParkour()[$playerData["parkour"]];
         if($level) {
@@ -27,9 +37,9 @@ class LocationMath {
             $level = $player->getLevel();
         }
         if($playerData["checkPoint"] == 0) {
-            $player->teleport(LocationMath::arrayToLocation($player, $parkour["start"], $level));
+            return self::arrayToLocation($player, $parkour["start"], $level);
         } else {
-            $player->teleport(LocationMath::arrayToLocation($player, $parkour["checkPoint"][$playerData["checkPoint"] - 1], $level));
+            return self::arrayToLocation($player, $parkour["checkPoint"][$playerData["checkPoint"] - 1], $level);
         }
     }
 

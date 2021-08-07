@@ -15,8 +15,8 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\player\PlayerExhaustEvent;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerLoginEvent;
 use pocketmine\event\player\PlayerQuitEvent;
+use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
 use pocketmine\Player;
@@ -76,7 +76,7 @@ class EventListener implements Listener {
     /**
      * no hit and no death.
      *
-     * @brief cannot hit and death when play parkour.
+     * @brief cannot hit when play parkour.
      *
      * @param EntityDamageEvent $event
      */
@@ -91,13 +91,21 @@ class EventListener implements Listener {
                         }
                     }
                 }
-            } else {
-                if (isset(Parkour::$plays[strtolower($entity->getName())])) {
-                    if($event->getFinalDamage() >= $entity->getHealth()) {
-                        $event->setCancelled(true);
-                    }
-                }
             }
+        }
+    }
+
+    /**
+     * handling death when play parkour
+     *
+     * @brief if death when play parkour, set respawnPosition to LastCheckPoint
+     *
+     * @param PlayerRespawnEvent $event
+     */
+    public function onRespawn(PlayerRespawnEvent $event) {
+        $player = $event->getPlayer();
+        if (isset(Parkour::$plays[strtolower($player->getName())])){
+            $event->setRespawnPosition(LocationMath::getLastCheckPoint($player, true));
         }
     }
 
