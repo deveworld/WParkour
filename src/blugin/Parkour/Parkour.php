@@ -159,7 +159,7 @@ class Parkour extends PluginBase implements Listener {
         self::$db = $this->config->getAll();
         // data is self::$db["data"], save is self::$db["save"]
 
-        $lang = $this->getConfig()->get("language", BaseLang::FALLBACK_LANGUAGE);
+        $lang = $this->getConfig()->get("language", "eng");
         $this->baseLang = new BaseLang((string)$lang, $this->getFile()."resources".DIRECTORY_SEPARATOR."lang".DIRECTORY_SEPARATOR);
 
         if($this->getConfig()->get("CheckPos", "false") == "false") {

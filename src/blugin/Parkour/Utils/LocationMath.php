@@ -23,6 +23,8 @@ class LocationMath {
     }
 
     /**
+     * get Last checkpoint
+     *
      * @param Player $player
      * @param bool   $level
      *
