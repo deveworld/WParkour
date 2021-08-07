@@ -1,5 +1,10 @@
 <img src="https://raw.githubusercontent.com/mcsim415/WParkour/main/parkour.png"></img></BR>
 # WParkour
+<p align="right">  
+  <a href="https://github.com/mcsim415/WParkour/blob/main/READEME_KO.md">  
+    <img src="https://img.shields.io/static/v1?label=%ED%95%9C%EA%B5%AD%EC%96%B4%EB%A1%9C&message=%EC%9D%BD%EA%B8%B0&labelColor=success">  
+  </a>  
+</p> 
 
 ## Download
 <a href="https://github.com/mcsim415/Parkour/releases/latest/download/WParkour.phar">Latest Version Download</a>
