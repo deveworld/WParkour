@@ -46,8 +46,11 @@ class Play extends UIPage {
                         (
                             new Text(
                                 "time.".$format,
-                                search: "{".$format."}",
-                                change: $time
+                                "",
+                                Text::NONE,
+                                "",
+                                "{".$format."}",
+                                $time
                             )
                         )
                     )
