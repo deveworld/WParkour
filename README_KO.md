@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/mcsim415/WParkour/main/parkour.png"></img></BR>
 # WParkour
 <p align="right">  
-  <a href="https://github.com/mcsim415/WParkour/blob/main/README.md">  
+  <a href="https://github.com/mcsim415/WParkour/">  
     <img src="https://img.shields.io/static/v1?label=English&message=README&labelColor=success">  
   </a>  
 </p> 
