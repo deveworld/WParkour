@@ -4,6 +4,8 @@ branches:
 - main
 projects:
   Parkour:
+    lint:
+      phpstan: false
     path: ""
     icon: "parkour.png"
 ...
