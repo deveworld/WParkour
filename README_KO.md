@@ -37,6 +37,6 @@
 명령어, "/parkour"를 입력하세요. </BR>
 만약 OP라면 "[ 게임하기 ]"를 누르세요. </BR>
 그런 후 게임하기 원하는 점프맵을 선택하세요. </BR>
-<img src="https://user-images.githubusercontent.com/48672862/128593985-a70e16d3-21d7-4ddb-8738-67927ca9db55.png" width="35%"></img></BR>
+<img src="https://user-images.githubusercontent.com/48672862/128594581-85ffbe1e-9279-4c57-99b4-57aef38d3629.png" width="35%"></img></BR>
 <img src="https://user-images.githubusercontent.com/48672862/128594754-b76c9a9e-eefa-4e76-a888-b3e341d9f2e0.png" width="35%"></img></BR>
 즐겨주세요! </BR></BR>
