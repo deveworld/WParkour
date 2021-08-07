@@ -60,13 +60,12 @@ class Text extends TextContainer {
             $text = $this->text_str.$this->midText; // get only text
         }
         $prefix = new Color($this->getTranslatedString("prefix")); // get "prefix color code"
-        $highlight = new Color(Color::BOLD); // "highlight color code"
         if($this->prefix != self::NONE) {
-            $text = $highlight.$prefix."[ ".$text." ".$prefix."]";
+            $text = $prefix."[ ".$text." ".$prefix."]";
         }
         if($this->prefix == self::EXPLAIN) {
             $name = new Text("name", "b"); // get name with color code "b"
-            $text = $highlight.$prefix."[ ".$name." ".$prefix."] ".$text;
+            $text = $prefix."[ ".$name." ".$prefix."] ".$text;
         }
         return $text;
     }

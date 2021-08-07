@@ -341,7 +341,7 @@ class AddParkour extends UIPage {
             case 5: // Check CheckPoint Position
                 $uiData["type"] = "form";
                 $playerData = Parkour::getData($player);
-                $n = count($player["addParkour"]["checkPoint"]);
+                $n = count($playerData["addParkour"]["checkPoint"]);
                 $x = $playerData["addParkour"]["checkPoint"]["x"];
                 $y = $playerData["addParkour"]["checkPoint"]["y"];
                 $z = $playerData["addParkour"]["checkPoint"]["z"];
