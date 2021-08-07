@@ -346,7 +346,7 @@ class AddParkour extends UIPage {
                 $y = $playerData["addParkour"]["checkPoint"][$n-2]["y"];
                 $z = $playerData["addParkour"]["checkPoint"][$n-2]["z"];
                 $uiData = $this->addContent($uiData, new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkCheckPoint", Color::$explain, Text::EXPLAIN, " = $x, $y, $z", "{n}", $n))->getText());
+                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkCheckPoint", Color::$explain, Text::EXPLAIN, " = $x, $y, $z", "{n}", $n-1))->getText());
                 $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
                 $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
