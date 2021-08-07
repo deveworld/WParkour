@@ -2,8 +2,8 @@
 # Please specify the language to be used in the plugin!
 # If your language is missing, you can add it on GitHub!
 # Available languages: eng, kor
-# Default setting: kor
-language: kor
+# Default setting: eng
+language: eng
 # Check position When making parkour.
 # Available Settings: false, true
 # Default setting: false
