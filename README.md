@@ -32,7 +32,7 @@ Click parkour what you want to delete. Delete Done! </BR></BR>
 
 ### - Play
 Enter the command "/parkour". </BR>
-If you are OP, click play. </BR>
+If you are OP, click "[ Play ]". </BR>
 And click parkour what you want to play. </BR>
 <img src="https://user-images.githubusercontent.com/48672862/128593985-a70e16d3-21d7-4ddb-8738-67927ca9db55.png" width="35%"></img></BR>
 Enjoy! </BR></BR>
