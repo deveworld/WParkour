@@ -78,6 +78,8 @@ class Parkour extends PluginBase implements Listener {
      * @param Player $player
      * @param string $arrayName
      * @param string $arrayName2
+     *
+     * @return bool
      */
     public static function delData(Player $player, string $arrayName = "", string $arrayName2 = ""): bool {
         $name = strtolower($player->getName());

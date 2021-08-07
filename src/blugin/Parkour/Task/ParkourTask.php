@@ -6,10 +6,6 @@ use blugin\Parkour\Parkour;
 use blugin\Parkour\Utils\Color;
 use blugin\Parkour\Utils\LocationMath;
 use blugin\Parkour\Utils\Text;
-use pocketmine\level\Level;
-use pocketmine\level\Location;
-use pocketmine\math\Vector3;
-use pocketmine\Player;
 use pocketmine\scheduler\Task;
 
 class ParkourTask extends Task {

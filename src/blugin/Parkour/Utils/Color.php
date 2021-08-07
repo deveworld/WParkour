@@ -2,7 +2,6 @@
 
 namespace blugin\Parkour\Utils;
 
-use blugin\Parkour\Parkour;
 use pocketmine\lang\TextContainer;
 
 class Color extends TextContainer {

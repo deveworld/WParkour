@@ -18,7 +18,7 @@ class AddParkour extends UIPage {
             case 0:
                 if(is_string($response[0]) && ($response[0] != "")) {
                     $overLap = false;
-                    foreach(Parkour::getParkour() as $k => $value) {
+                    foreach(Parkour::getParkour() as $value) {
                         if($value["name"] == $response[0]) {
                             $overLap = true;
                             break;
