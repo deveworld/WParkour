@@ -96,7 +96,7 @@ class Play extends UIPage {
             $uiData = $this->addButton($uiData, new Text("close", Color::$warning, Text::BUTTON));
         } else {
             $uiData = $this->addContent($uiData, new Text("selectParkourPlay", Color::$explain, Text::EXPLAIN));
-            foreach($parkour as $key => $value) {
+            foreach($parkour as $value) {
                 $name = $value["name"];
                 $uiData = $this->addButton($uiData, new Text($name, Color::$button, Text::BUTTON, translate:false));
             }
