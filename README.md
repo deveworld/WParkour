@@ -20,5 +20,14 @@ And follow the message! Done! </BR></BR>
 ### - Del Parkour
 If you want delete parkour, you must be have a permisson(OP), too! </BR>
 enter the command and click "[ Manage ]". </BR>
-And click "[ Del parkour ]".
+And click "[ Del parkour ]". </BR>
 <img src="https://user-images.githubusercontent.com/48672862/128593349-778bbcaa-095e-48b8-9dfd-f55b6ce7a2d7.png" width="35%"></img></BR>
+<img src="https://user-images.githubusercontent.com/48672862/128593859-01979fb7-46b9-44f2-9f07-b40c69ac4a37.png" width="35%"></img></BR>
+Click parkour what you want to delete. Delete Done! </BR></BR>
+
+### - Play
+Enter the command "/parkour". </BR>
+If you are OP, click play. </BR>
+And click parkour what you want to play. </BR>
+<img src="https://user-images.githubusercontent.com/48672862/128593985-a70e16d3-21d7-4ddb-8738-67927ca9db55.png" width="35%"></img></BR>
+Enjoy! </BR></BR>
