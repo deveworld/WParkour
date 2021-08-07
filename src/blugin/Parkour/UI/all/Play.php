@@ -101,7 +101,7 @@ class Play extends UIPage {
             $uiData = $this->addContent($uiData, new Text("selectParkourPlay", Color::$explain, Text::EXPLAIN));
             foreach($parkour as $value) {
                 $name = $value["name"];
-                $uiData = $this->addButton($uiData, new Text($name, Color::$button, Text::BUTTON, translate:false));
+                $uiData = $this->addButton($uiData, new Text($name, Color::$button, Text::BUTTON, "", "", "", false));
             }
         }
         $ui = new ModalFormRequestPacket();
