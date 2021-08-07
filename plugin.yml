@@ -1,5 +1,5 @@
 ---
-name: Parkour
+name: WParkour
 main: blugin\Parkour\Parkour
 version: 1.0
 api: [ 3.0.0 ]
