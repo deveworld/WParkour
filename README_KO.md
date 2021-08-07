@@ -10,7 +10,7 @@
 </p> 
 
 ### 다운로드
-<a href="https://poggit.pmmp.io/r/136018/Parkour.phar">최신버전 다운로드</a>
+<a href="https://poggit.pmmp.io/r/136068/Parkour.phar">최신버전 다운로드</a>
 
 ## 설명
 ### - 명령어
