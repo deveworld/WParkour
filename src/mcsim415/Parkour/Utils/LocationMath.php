@@ -1,8 +1,8 @@
 <?php
 
-namespace blugin\Parkour\Utils;
+namespace mcsim415\Parkour\Utils;
 
-use blugin\Parkour\Parkour;
+use mcsim415\Parkour\Parkour;
 use pocketmine\level\Level;
 use pocketmine\level\Location;
 use pocketmine\math\Vector3;

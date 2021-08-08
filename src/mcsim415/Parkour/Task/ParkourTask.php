@@ -1,11 +1,11 @@
 <?php
 
-namespace blugin\Parkour\Task;
+namespace mcsim415\Parkour\Task;
 
-use blugin\Parkour\Parkour;
-use blugin\Parkour\Utils\Color;
-use blugin\Parkour\Utils\LocationMath;
-use blugin\Parkour\Utils\Text;
+use mcsim415\Parkour\Parkour;
+use mcsim415\Parkour\Utils\Color;
+use mcsim415\Parkour\Utils\LocationMath;
+use mcsim415\Parkour\Utils\Text;
 use pocketmine\scheduler\Task;
 
 class ParkourTask extends Task {

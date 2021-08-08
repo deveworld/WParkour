@@ -1,15 +1,15 @@
 <?php
 
-namespace blugin\Parkour\UI;
+namespace mcsim415\Parkour\UI;
 
-use blugin\Parkour\Parkour;
-use blugin\Parkour\UI\admin\AddParkour;
-use blugin\Parkour\UI\admin\ContinueAdd;
-use blugin\Parkour\UI\admin\DelParkour;
-use blugin\Parkour\UI\admin\SelManage;
-use blugin\Parkour\UI\admin\SelWork;
-use blugin\Parkour\Utils\Text;
-use blugin\Parkour\UI\all\Play;
+use mcsim415\Parkour\Parkour;
+use mcsim415\Parkour\UI\admin\AddParkour;
+use mcsim415\Parkour\UI\admin\ContinueAdd;
+use mcsim415\Parkour\UI\admin\DelParkour;
+use mcsim415\Parkour\UI\admin\SelManage;
+use mcsim415\Parkour\UI\admin\SelWork;
+use mcsim415\Parkour\Utils\Text;
+use mcsim415\Parkour\UI\all\Play;
 use pocketmine\Player;
 
 abstract class UIPage {

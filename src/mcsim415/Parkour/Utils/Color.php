@@ -1,6 +1,6 @@
 <?php
 
-namespace blugin\Parkour\Utils;
+namespace mcsim415\Parkour\Utils;
 
 use pocketmine\lang\TextContainer;
 

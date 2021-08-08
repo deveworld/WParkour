@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace blugin\Parkour;
+namespace mcsim415\Parkour;
 
-use blugin\Parkour\Command\ParkourCommand;
-use blugin\Parkour\Event\EventListener;
-use blugin\Parkour\Task\ParkourTask;
-use blugin\Parkour\UI\UIPage;
-use blugin\Parkour\Utils\Color;
-use blugin\Parkour\Utils\Text;
+use mcsim415\Parkour\Command\ParkourCommand;
+use mcsim415\Parkour\Event\EventListener;
+use mcsim415\Parkour\Task\ParkourTask;
+use mcsim415\Parkour\UI\UIPage;
+use mcsim415\Parkour\Utils\Color;
+use mcsim415\Parkour\Utils\Text;
 use pocketmine\event\Listener;
 use pocketmine\lang\BaseLang;
 use pocketmine\Player;

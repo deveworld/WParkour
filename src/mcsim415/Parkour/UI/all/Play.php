@@ -1,13 +1,13 @@
 <?php
-namespace blugin\Parkour\UI\all;
+namespace mcsim415\Parkour\UI\all;
 
-use blugin\Parkour\Parkour;
-use blugin\Parkour\Utils\Color;
-use blugin\Parkour\Utils\Text;
+use mcsim415\Parkour\Parkour;
+use mcsim415\Parkour\Utils\Color;
+use mcsim415\Parkour\Utils\Text;
 use pocketmine\level\Location;
 use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
 use pocketmine\Player;
-use blugin\Parkour\UI\UIPage;
+use mcsim415\Parkour\UI\UIPage;
 
 class Play extends UIPage {
     public const FORM_ID = 18321003;

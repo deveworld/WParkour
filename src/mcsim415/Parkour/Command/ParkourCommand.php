@@ -1,11 +1,11 @@
 <?php
 
-namespace blugin\Parkour\Command;
+namespace mcsim415\Parkour\Command;
 
-use blugin\Parkour\Parkour;
-use blugin\Parkour\UI\UIPage;
-use blugin\Parkour\Utils\Color;
-use blugin\Parkour\Utils\Text;
+use mcsim415\Parkour\Parkour;
+use mcsim415\Parkour\UI\UIPage;
+use mcsim415\Parkour\Utils\Color;
+use mcsim415\Parkour\Utils\Text;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;

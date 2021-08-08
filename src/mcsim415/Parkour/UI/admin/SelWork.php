@@ -1,10 +1,10 @@
 <?php
 
-namespace blugin\Parkour\UI\admin;
+namespace mcsim415\Parkour\UI\admin;
 
-use blugin\Parkour\UI\UIPage;
-use blugin\Parkour\Utils\Color;
-use blugin\Parkour\Utils\Text;
+use mcsim415\Parkour\UI\UIPage;
+use mcsim415\Parkour\Utils\Color;
+use mcsim415\Parkour\Utils\Text;
 use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
 use pocketmine\Player;
 

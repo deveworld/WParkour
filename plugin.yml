@@ -1,9 +1,9 @@
 ---
 name: WParkour
-main: blugin\Parkour\Parkour
+main: mcsim415\Parkour\Parkour
 version: 1.0
 api: [ 3.0.0 ]
-author: World
+author: World # = mcsim415
 description: Parkour Plugin
 mcpe-protocol: [448, 431, 428]
 softdepend :
