@@ -2,15 +2,15 @@
 # WParkour
 <p align="right">  
     <a href="https://github.com/mcsim415/WParkour/blob/main/README_KO.md">  
-        <img src="https://img.shields.io/static/v1?label=%ED%95%9C%EA%B5%AD%EC%96%B4%EB%A1%9C&message=%EC%9D%BD%EA%B8%B0&labelColor=success">  
+        <img alt="download" src="https://img.shields.io/static/v1?label=%ED%95%9C%EA%B5%AD%EC%96%B4%EB%A1%9C&message=%EC%9D%BD%EA%B8%B0&labelColor=success">  
     </a>  
     <a href="https://poggit.pmmp.io/p/WParkour/1.0">
-        <img src="https://poggit.pmmp.io/shield.state/WParkour">
+        <img alt="state" src="https://poggit.pmmp.io/shield.state/WParkour">
     </a>
 </p> 
 
 ## Download
-<a href="https://poggit.pmmp.io/r/136068/Parkour.phar">Latest Version Download</a>
+<a href="https://poggit.pmmp.io/r/136231/Parkour.phar">Latest Version Download</a>
 
 ## Description
 ### - Command

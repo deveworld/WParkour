@@ -2,15 +2,15 @@
 # WParkour
 <p align="right">  
     <a href="https://github.com/mcsim415/WParkour/">  
-        <img src="https://img.shields.io/static/v1?label=English&message=README&labelColor=success">  
+        <img alt="download" src="https://img.shields.io/static/v1?label=English&message=README&labelColor=success">  
     </a>  
     <a href="https://poggit.pmmp.io/p/WParkour/1.0">
-        <img src="https://poggit.pmmp.io/shield.state/WParkour">
+        <img alt="state" src="https://poggit.pmmp.io/shield.state/WParkour">
     </a>
 </p> 
 
 ### 다운로드
-<a href="https://poggit.pmmp.io/r/136068/Parkour.phar">최신버전 다운로드</a>
+<a href="https://poggit.pmmp.io/r/136231/Parkour.phar">최신버전 다운로드</a>
 
 ## 설명
 ### - 명령어
