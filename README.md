@@ -10,7 +10,7 @@
 </p> 
 
 ## Download
-<a href="https://poggit.pmmp.io/r/136231/Parkour.phar">Latest Version Download</a>
+<a href="https://github.com/mcsim415/WParkour/releases/download/WParkour/WParkour.phar">Latest Version Download</a>
 
 ## Description
 ### - Command

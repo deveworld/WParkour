@@ -10,7 +10,7 @@
 </p> 
 
 ### 다운로드
-<a href="https://poggit.pmmp.io/r/136231/Parkour.phar">최신버전 다운로드</a>
+<a href="https://github.com/mcsim415/WParkour/releases/download/WParkour/WParkour.phar">최신버전 다운로드</a>
 
 ## 설명
 ### - 명령어
