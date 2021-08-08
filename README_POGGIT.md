@@ -43,3 +43,8 @@ And click parkour on what you want to play.
 <img src="https://user-images.githubusercontent.com/48672862/128593985-a70e16d3-21d7-4ddb-8738-67927ca9db55.png" width="35%" style="float: left;"></img>
 
 Enjoy!
+
+### Translate
+If this plugin doesn't have your language, you can add your language!
+
+Read more about this <a href="https://github.com/mcsim415/WParkour/wiki/Translate-plugin">here</a>.

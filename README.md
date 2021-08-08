@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/mcsim415/WParkour/main/parkour.png"></img></BR>
 # WParkour
-<p align="right">  
+<p style="text-align: right">
     <a href="https://github.com/mcsim415/WParkour/blob/main/README_KO.md">  
         <img alt="download" src="https://img.shields.io/static/v1?label=%ED%95%9C%EA%B5%AD%EC%96%B4%EB%A1%9C&message=%EC%9D%BD%EA%B8%B0&labelColor=success">  
     </a>  
@@ -39,3 +39,7 @@ If you are OP, click "[ Play ]". </BR>
 And click parkour what you want to play. </BR>
 <img src="https://user-images.githubusercontent.com/48672862/128593985-a70e16d3-21d7-4ddb-8738-67927ca9db55.png" width="35%"></img></BR>
 Enjoy! </BR></BR>
+
+### Translate
+If this plugin doesn't have your language, you can add your language!</BR>
+Read more about this <a href="https://github.com/mcsim415/WParkour/wiki/Translate-plugin">here</a>.

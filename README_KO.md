@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/mcsim415/WParkour/main/parkour.png"></img></BR>
 # WParkour
-<p align="right">  
+<p style="text-align: right">  
     <a href="https://github.com/mcsim415/WParkour/">  
         <img alt="download" src="https://img.shields.io/static/v1?label=English&message=README&labelColor=success">  
     </a>  
@@ -40,3 +40,7 @@
 <img src="https://user-images.githubusercontent.com/48672862/128594581-85ffbe1e-9279-4c57-99b4-57aef38d3629.png" width="35%"></img></BR>
 <img src="https://user-images.githubusercontent.com/48672862/128594754-b76c9a9e-eefa-4e76-a888-b3e341d9f2e0.png" width="35%"></img></BR>
 즐겨주세요! </BR></BR>
+
+### Translate
+만약 플러그인이 원하는 언어를 지원하지 않을경우, 당신이 추가할 수 있습니다!</BR>
+<a href="https://github.com/mcsim415/WParkour/wiki/Translate-plugin">여기서</a> 더 자세히 알아보세요.
