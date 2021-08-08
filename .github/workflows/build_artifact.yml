@@ -24,13 +24,6 @@ jobs:
 
       - name: Display structure of current working directory
         run: ls -R
-
-      - name: Upload artifact.phar
-        uses: actions/upload-artifact@v2.2.2
-        with:
-          name: artifact
-          path: .build/WParkour.phar
-          retention-days: 90
           
       - uses: eine/tip@master
         with:
