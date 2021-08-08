@@ -20,7 +20,7 @@ jobs:
         run: wget -O .build/build.php https://raw.githubusercontent.com/pmmp/DevTools/master/src/DevTools/ConsoleScript.php
 
       - name: Build source to artifact.phar
-        run: php -dphar.readonly=0 .build/build.php --make ./ --out .build/artifact.phar
+        run: php -dphar.readonly=0 .build/build.php --make ./ --out .build/WParkour.phar
 
       - name: Display structure of current working directory
         run: ls -R
@@ -29,5 +29,5 @@ jobs:
         uses: actions/upload-artifact@v2.2.2
         with:
           name: artifact
-          path: .build/artifact.phar
+          path: .build/WParkour.phar
           retention-days: 90
