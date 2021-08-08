@@ -24,8 +24,16 @@ jobs:
 
       - name: Display structure of current working directory
         run: ls -R
-          
-      - uses: eine/tip@master
+
+      - name: Upload WParkour.phar
+        uses: actions/upload-artifact@v2.2.2
+        with:
+          name: WParkour.phar
+          path: .build/WParkour.phar
+          retention-days: 90
+
+      - name: Upload WParkour.phar to releases
+        uses: eine/tip@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: 'WParkour'

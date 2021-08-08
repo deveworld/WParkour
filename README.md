@@ -10,7 +10,8 @@
 </p> 
 
 ## Download
-<a href="https://github.com/mcsim415/WParkour/releases/download/WParkour/WParkour.phar">Latest Version Download</a>
+<a href="https://poggit.pmmp.io/p/WParkour/1.0">Download stable version in Poggit.</a></BR>
+<a href="https://github.com/mcsim415/WParkour/releases/download/WParkour/WParkour.phar">Pre-release Download in GitHub. (It may be unstable)</a>
 
 ## Description
 ### - Command
