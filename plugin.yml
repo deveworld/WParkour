@@ -5,6 +5,7 @@ version: 1.0
 api: [ 3.0.0 ]
 author: World
 description: Parkour Plugin
+mcpe-protocol: [448, 431, 428]
 softdepend :
   - EconomyAPI
 
