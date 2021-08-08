@@ -31,3 +31,10 @@ jobs:
           name: artifact
           path: .build/WParkour.phar
           retention-days: 90
+          
+      - uses: eine/tip@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: 'WParkour'
+          files: |
+            .build/WParkour.phar
