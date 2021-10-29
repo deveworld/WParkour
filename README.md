@@ -44,3 +44,8 @@ Enjoy! </BR></BR>
 ### Translate
 If this plugin doesn't have your language, you can add your language!</BR>
 Read more about this <a href="https://github.com/mcsim415/WParkour/wiki/Translate-plugin">here</a>.
+
+## Notice
+This plugin moved to here from <a href="https://web.archive.org/web/20210808110601if_/https://github.com/Blugin/Parkour">here</a>
+Because Blugin team's repos were not loading in poggit.
+As you can see from the commits, all of them were written by me, all rights belong to me.
