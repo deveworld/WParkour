@@ -17,7 +17,7 @@ use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class EventListener implements Listener {
     /**
@@ -67,7 +67,7 @@ class EventListener implements Listener {
      */
     public function onHunger(PlayerExhaustEvent $event) {
         if (isset(Parkour::$plays[strtolower($event->getPlayer()->getName())])) {
-            $event->setCancelled(true);
+            $event->cancel();
         }
     }
 
@@ -85,7 +85,7 @@ class EventListener implements Listener {
                 if($event instanceof EntityDamageByEntityEvent) {
                     if ($event->getDamager() instanceof Player) {
                         if (isset(Parkour::$plays[strtolower($entity->getName())])) {
-                            $event->setCancelled(true);
+                            $event->cancel();
                         }
                     }
                 }
@@ -141,13 +141,13 @@ class EventListener implements Listener {
         if($event->getBlock()->getId() != 0) {
             if(isset(Parkour::getData($player)["addParkour"]["select"])) {
                 if(Parkour::getData($player)["addParkour"]["select"] != 0) {
-                    $event->setCancelled(true);
+                    $event->cancel();
                     $block = $event->getBlock();
                     $playerData = Parkour::getData($player);
                     $toModify = $playerData["addParkour"]["select"];
-                    $x = $block->getFloorX();
-                    $y = $block->getFloorY() + 1;
-                    $z = $block->getFloorZ();
+                    $x = $block->getPosition()->getFloorX();
+                    $y = $block->getPosition()->getFloorY() + 1;
+                    $z = $block->getPosition()->getFloorZ();
                     if($toModify != "checkPoint") {
                         if($toModify == "floor") {
                             $playerData["addParkour"][(string) $toModify]["y"] = $y;
@@ -220,7 +220,7 @@ class EventListener implements Listener {
     public function onReceivePacket(DataPacketReceiveEvent $event) {
         $pk = $event->getPacket();
         if($pk instanceof ModalFormResponsePacket) {
-            $player = $event->getPlayer();
+            $player = $event->getOrigin()->getPlayer();
             $data = json_decode($pk->formData, true);
             if (!is_null($data) && ($player instanceof Player)) {
                 $id = $pk->formId;

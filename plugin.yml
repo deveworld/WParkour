@@ -2,14 +2,20 @@
 name: WParkour
 main: mcsim415\Parkour\Parkour
 version: 1.0
-api: [ 3.0.0 ]
+api: [ 4.0.0 ]
 author: World # = mcsim415
 description: Parkour Plugin
-mcpe-protocol: [448, 431, 428]
+mcpe-protocol: [527, 534, 544, 545] # 1.19 ~ 1.19.21
 softdepend :
   - EconomyAPI
 
 commands:
   parkour:
     description: Parkour command
+    usage: "/parkour"
+    permission: parkour.command.parkour
+
+permissions:
+  parkour.command.parkour:
+    default: true
 ...

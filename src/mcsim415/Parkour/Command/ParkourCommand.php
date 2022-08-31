@@ -9,7 +9,8 @@ use mcsim415\Parkour\Utils\Text;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\permission\DefaultPermissions;
+use pocketmine\player\Player;
 
 class ParkourCommand implements CommandExecutor {
     public Parkour $loader;
@@ -33,7 +34,7 @@ class ParkourCommand implements CommandExecutor {
                     Parkour::delPlay($player);
                     $player->sendMessage(new Text("giveUp", Color::$explain, Text::EXPLAIN));
                 } else {
-                    if($sender->isOp()){
+                    if($sender->hasPermission(DefaultPermissions::ROOT_OPERATOR)) { // TODO: SHOULD CHANGE PERMISSION
                         UIPage::getPageByName("admin", "SelWork")->sendTo($sender);
                     } else {
                         UIPage::getPageByName("all", "Play")->sendTo($sender);
