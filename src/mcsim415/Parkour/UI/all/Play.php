@@ -4,9 +4,10 @@ namespace mcsim415\Parkour\UI\all;
 use mcsim415\Parkour\Parkour;
 use mcsim415\Parkour\Utils\Color;
 use mcsim415\Parkour\Utils\Text;
-use pocketmine\level\Location;
+use pocketmine\entity\Location;
 use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
-use pocketmine\Player;
+use pocketmine\player\GameMode;
+use pocketmine\player\Player;
 use mcsim415\Parkour\UI\UIPage;
 
 class Play extends UIPage {
@@ -33,7 +34,6 @@ class Play extends UIPage {
                     $format = "i";
                     $time = round($remain/60);
                 } elseif(round($remain) != 0) {
-                    $format = "s";
                     $time = round($remain);
                 }
                 $player->sendMessage(
@@ -75,12 +75,12 @@ class Play extends UIPage {
                     $parkour[$response]["start"]["x"] + 0.5,
                     $parkour[$response]["start"]["y"],
                     $parkour[$response]["start"]["z"] + 0.5,
-                    $player->getYaw(),
-                    $player->getPitch(),
-                    $level
+                    $level,
+                    $player->getLocation()->getYaw(),
+                    $player->getLocation()->getPitch()
                 );
                 Parkour::addPlay($player);
-                $player->setGamemode(2);
+                $player->setGamemode(GameMode::ADVENTURE());
                 $player->teleport($start);
                 $player->sendMessage(new Text("entrance", Color::$explain, Text::EXPLAIN, "", "{name}", $parkour[$response]["name"]));
                 $player->sendMessage(new Text("out", Color::$explain, Text::EXPLAIN));
@@ -107,7 +107,7 @@ class Play extends UIPage {
         $ui = new ModalFormRequestPacket();
         $ui->formId = self::FORM_ID;
         $ui->formData = json_encode($uiData);
-        $player->dataPacket($ui);
+        $player->getNetworkSession()->sendDataPacket($ui);
     }
 
     public function getFolderName() : string {

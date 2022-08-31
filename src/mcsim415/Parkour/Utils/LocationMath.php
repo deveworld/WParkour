@@ -3,10 +3,10 @@
 namespace mcsim415\Parkour\Utils;
 
 use mcsim415\Parkour\Parkour;
-use pocketmine\level\Level;
-use pocketmine\level\Location;
+use pocketmine\world\World;
+use pocketmine\entity\Location;
 use pocketmine\math\Vector3;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class LocationMath {
 
@@ -18,7 +18,7 @@ class LocationMath {
      * @param Player $player target player
      * @param bool   $level set location Level with parkour World Level
      */
-    public static function goToLastCheckpoint(Player $player, bool $level = false) {
+    public static function goToLastCheckpoint(Player $player, bool $level = false) : void {
         $player->teleport(self::getLastCheckPoint($player, $level));
     }
 
@@ -36,7 +36,7 @@ class LocationMath {
         if($level) {
             $level = Parkour::getInstance()->getServer()->getLevelByName($parkour["world"]);
         } else {
-            $level = $player->getLevel();
+            $level = $player->getWorld();
         }
         if($playerData["checkPoint"] == 0) {
             return self::arrayToLocation($player, $parkour["start"], $level);
@@ -48,21 +48,21 @@ class LocationMath {
     /**
      * @param Player     $player
      * @param array      $arrayLoc
-     * @param Level|null $level
+     * @param World|null $level
      *
      * @return Location
      */
-    public static function arrayToLocation(Player $player, array $arrayLoc, Level $level = null): Location {
+    public static function arrayToLocation(Player $player, array $arrayLoc, World $level = null): Location {
         if($level == null) {
-            $level = $player->getLevel();
+            $level = $player->getWorld();
         }
         return new Location(
             $arrayLoc["x"]+0.5,
             $arrayLoc["y"],
             $arrayLoc["z"]+0.5,
-            $player->getYaw(),
-            $player->getPitch(),
-            $level
+            $level,
+            $player->getLocation()->getYaw(),
+            $player->getLocation()->getPitch()
         );
     }
 

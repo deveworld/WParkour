@@ -2,16 +2,14 @@
 
 namespace mcsim415\Parkour\Utils;
 
-use pocketmine\lang\TextContainer;
 
-class Color extends TextContainer {
+class Color{
     public const COLOR_CODE = "\xc2\xa7";
 
     protected string $code;
     public static string $prefix, $explain, $button, $warning, $error;
 
     public function __construct(string $code) {
-        parent::__construct($code);
         $this->code = $code;
     }
 
@@ -23,7 +21,7 @@ class Color extends TextContainer {
         self::$error = Text::getTranslatedString("error");
     }
 
-    public function getText() : string{
+    public function __toString() : string{
         return self::COLOR_CODE.$this->code;
     }
 }

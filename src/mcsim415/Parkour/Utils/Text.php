@@ -3,9 +3,8 @@
 namespace mcsim415\Parkour\Utils;
 
 use mcsim415\Parkour\Parkour;
-use pocketmine\lang\TextContainer;
 
-class Text extends TextContainer {
+class Text {
     public const TRANSLATE_PREFIX = "parkour.";
 
     public const NONE = 0;
@@ -35,7 +34,6 @@ class Text extends TextContainer {
         if(($search != "") && ($change != "")) {
             $this->text_str = str_replace($search, $change, $this->text_str);
         }
-        parent::__construct($text_str);
         $this->code = $code;
         $this->prefix = $prefix;
         $this->midText = $midText;
@@ -53,7 +51,7 @@ class Text extends TextContainer {
     /**
      * @return string get text
      */
-    public function getText(): string {
+    public function __toString(): string {
         if($this->code != "") {
             $text = new Color($this->code).$this->text_str.$this->midText; // get color with text
         } else {

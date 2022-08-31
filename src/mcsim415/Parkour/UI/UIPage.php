@@ -10,7 +10,7 @@ use mcsim415\Parkour\UI\admin\SelManage;
 use mcsim415\Parkour\UI\admin\SelWork;
 use mcsim415\Parkour\Utils\Text;
 use mcsim415\Parkour\UI\all\Play;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 abstract class UIPage {
     public Parkour $plugin;
@@ -77,7 +77,7 @@ abstract class UIPage {
         $formId = (int) self::$addParkour::FORM_ID; // addParkour Form id
         $formIdList = array();
         for($i=0; $i<=17; $i=$i+1) {
-            array_push($formIdList, $formId+$i); // addParkour Form id array
+            $formIdList[] = $formId + $i; // addParkour Form id array
         }
         foreach($formIdList as $value) {
             self::$form_ids[$value] = self::$addParkour;
@@ -93,9 +93,6 @@ abstract class UIPage {
      * @return array newer ui data
      */
     public function setTitle(array $data, string $title) : array {
-        if($title instanceof Text) {
-            $title = $title->getText();
-        }
         $data["title"] = $title;
         return $data;
     }
@@ -107,9 +104,6 @@ abstract class UIPage {
      * @return array newer ui data
      */
     public function addContent(array $data, string $content) : array {
-        if($content instanceof Text) {
-            $content = $content->getText();
-        }
         if(isset($data["content"])) {
             $data["content"] .= "\n".$content;
         } else {
@@ -127,9 +121,6 @@ abstract class UIPage {
      * @return array newer ui data
      */
     public function addButton(array $data, string $text, int $imageType = -1, string $imagePath = "") : array {
-        if($text instanceof Text) {
-            $text = $text->getText();
-        }
         $content = ["text" => $text];
         if($imageType !== -1) {
             $content["image"]["type"] = $imageType === 0 ? "path" : "url";

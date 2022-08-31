@@ -7,7 +7,7 @@ use mcsim415\Parkour\UI\UIPage;
 use mcsim415\Parkour\Utils\Color;
 use mcsim415\Parkour\Utils\Text;
 use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class SelManage extends UIPage {
     public const FORM_ID = 18321002;
@@ -41,7 +41,7 @@ class SelManage extends UIPage {
         $ui = new ModalFormRequestPacket();
         $ui->formId = self::FORM_ID;
         $ui->formData = json_encode($uiData);
-        $player->dataPacket($ui);
+        $player->getNetworkSession()->sendDataPacket($ui);
     }
 
     public function getFolderName(): string {

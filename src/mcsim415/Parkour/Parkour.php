@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace mcsim415\Parkour;
 
+use JsonException;
 use mcsim415\Parkour\Command\ParkourCommand;
 use mcsim415\Parkour\Event\EventListener;
 use mcsim415\Parkour\Task\ParkourTask;
@@ -10,13 +11,13 @@ use mcsim415\Parkour\UI\UIPage;
 use mcsim415\Parkour\Utils\Color;
 use mcsim415\Parkour\Utils\Text;
 use pocketmine\event\Listener;
-use pocketmine\lang\BaseLang;
-use pocketmine\Player;
+use pocketmine\lang\Language;
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
 class Parkour extends PluginBase implements Listener {
-    private BaseLang $baseLang;
+    private Language $baseLang;
 
     private static $instance = null;
 
@@ -35,7 +36,7 @@ class Parkour extends PluginBase implements Listener {
      */
     public static array $plays = [];
 
-    public function onLoad() {
+    protected function onLoad() : void{
         if (self::$instance == null) {
             self::$instance = $this;
         }
@@ -152,7 +153,7 @@ class Parkour extends PluginBase implements Listener {
         }
     }
 
-    public function onEnable() {
+    public function onEnable() : void {
         @mkdir($this->getDataFolder());
         // data is Parkour data, save is player data
         $this->config = new Config($this->getDataFolder() . "Data.yml", Config::YAML, ["data" => [], "save" => []]);
@@ -160,7 +161,7 @@ class Parkour extends PluginBase implements Listener {
         // data is self::$db["data"], save is self::$db["save"]
 
         $lang = $this->getConfig()->get("language", "eng");
-        $this->baseLang = new BaseLang((string)$lang, $this->getFile()."resources".DIRECTORY_SEPARATOR."lang".DIRECTORY_SEPARATOR);
+        $this->baseLang = new Language((string)$lang, $this->getFile()."resources".DIRECTORY_SEPARATOR."lang".DIRECTORY_SEPARATOR);
 
         if($this->getConfig()->get("CheckPos", "false") == "false") {
             self::$checkPos = false;
@@ -178,8 +179,10 @@ class Parkour extends PluginBase implements Listener {
 
     /**
      * save ALL data to File at plugin disabled.
+     *
+     * @throws JsonException
      */
-    public function onDisable() {
+    protected function onDisable() : void {
         $this->config->setAll(self::$db);
         $this->config->save();
     }
@@ -189,9 +192,9 @@ class Parkour extends PluginBase implements Listener {
      *
      * @brief get translated ini file object.
      *
-     * @return BaseLang
+     * @return Language
      */
-    public function getLang(): BaseLang {
+    public function getLang(): Language {
         return $this->baseLang;
     }
 }

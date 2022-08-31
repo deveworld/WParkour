@@ -16,7 +16,7 @@ class ParkourTask extends Task {
         $this->plugin = $plugin;
     }
 
-    public function onRun($currentTick) {
+    public function onRun() : void {
         foreach($this->plugin->getServer()->getOnlinePlayers() as $player) {
             if(isset(Parkour::$plays[strtolower($player->getName())])) {
                 $playerData = Parkour::getData($player);
@@ -24,7 +24,7 @@ class ParkourTask extends Task {
                 $location = $player->getLocation();
 
                 // if parkour world and player world isn't same
-                if ($parkour['world'] != $player->getLevel()->getFolderName()) {
+                if ($parkour['world'] != $player->getWorld()->getFolderName()) {
                     LocationMath::goToLastCheckpoint($player, true);
                     $player->sendMessage(new Text("noWarp", Color::$warning, Text::EXPLAIN));
                 }
