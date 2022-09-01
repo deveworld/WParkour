@@ -4,13 +4,13 @@
     <a href="https://github.com/mcsim415/WParkour/">  
         <img alt="download" src="https://img.shields.io/static/v1?label=English&message=README&labelColor=success">  
     </a>  
-    <a href="https://poggit.pmmp.io/p/WParkour/1.0">
+    <a href="https://poggit.pmmp.io/p/WParkour/1.1">
         <img alt="state" src="https://poggit.pmmp.io/shield.state/WParkour">
     </a>
 </p> 
 
 ### 다운로드
-<a href="https://poggit.pmmp.io/p/WParkour/1.0">Poggit 에서 안정 버전 다운로드하기</a> </BR>
+<a href="https://poggit.pmmp.io/p/WParkour/1.1">Poggit 에서 안정 버전 다운로드하기</a> </BR>
 <a href="https://github.com/mcsim415/WParkour/releases/download/WParkour/WParkour.phar">깃허브에서 최신 다운로드하기 (불안정할 수 있습니다.)</a>
 
 ## 설명

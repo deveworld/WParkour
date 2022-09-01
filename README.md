@@ -4,13 +4,13 @@
     <a href="https://github.com/mcsim415/WParkour/blob/main/README_KO.md">  
         <img alt="download" src="https://img.shields.io/static/v1?label=%ED%95%9C%EA%B5%AD%EC%96%B4%EB%A1%9C&message=%EC%9D%BD%EA%B8%B0&labelColor=success">  
     </a>  
-    <a href="https://poggit.pmmp.io/p/WParkour/1.0">
+    <a href="https://poggit.pmmp.io/p/WParkour/1.1">
         <img alt="state" src="https://poggit.pmmp.io/shield.state/WParkour">
     </a>
 </p> 
 
 ## Download
-<a href="https://poggit.pmmp.io/p/WParkour/1.0">Download stable version in Poggit.</a></BR>
+<a href="https://poggit.pmmp.io/p/WParkour/1.1">Download stable version in Poggit.</a></BR>
 <a href="https://github.com/mcsim415/WParkour/releases/download/WParkour/WParkour.phar">Pre-release Download in GitHub. (It may be unstable)</a>
 
 ## Description
