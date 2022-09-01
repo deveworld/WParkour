@@ -26,7 +26,7 @@ class ParkourTask extends Task {
                 // if parkour world and player world isn't same
                 if ($parkour['world'] != $player->getWorld()->getFolderName()) {
                     LocationMath::goToLastCheckpoint($player, true);
-                    $player->sendMessage(new Text("noWarp", Color::$warning, Text::EXPLAIN));
+                    $player->sendMessage((string) new Text("noWarp", Color::$warning, Text::EXPLAIN));
                 }
 
                 // If remain more checkpoint
@@ -37,7 +37,7 @@ class ParkourTask extends Task {
                             $playerData["noCheckPoint"] = true;
                         }
                         Parkour::setData($player, $playerData);
-                        $player->sendMessage(new Text("reachCheckPoint", Color::$explain, Text::EXPLAIN, "", "{n}", (string) $playerData["checkPoint"]));
+                        $player->sendMessage((string) new Text("reachCheckPoint", Color::$explain, Text::EXPLAIN, "", "{n}", (string) $playerData["checkPoint"]));
                     }
                 }
 
@@ -49,11 +49,11 @@ class ParkourTask extends Task {
                 // Reach END
                 if(LocationMath::equal($location, $parkour["end"])) {
                     if(!$playerData["noCheckPoint"]) {
-                        $player->sendMessage(new Text("reachAll", Color::$warning, Text::EXPLAIN));
+                        $player->sendMessage((string) new Text("reachAll", Color::$warning, Text::EXPLAIN));
                         continue;
                     }
                     $parkourName = $parkour["name"];
-                    $player->sendMessage(new Text("clear", Color::$explain, Text::EXPLAIN, "", "{name}", $parkourName));
+                    $player->sendMessage((string) new Text("clear", Color::$explain, Text::EXPLAIN, "", "{name}", $parkourName));
                     $player->setGamemode($playerData["gameMode"]);
                     $player->teleport($playerData["location"]);
                     Parkour::$db["save"][strtolower($player->getName())][$playerData["parkour"]] = mktime(

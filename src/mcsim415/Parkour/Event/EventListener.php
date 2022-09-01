@@ -123,7 +123,7 @@ class EventListener implements Listener {
 //        $entity = $event->getEntity();
 //        if($entity instanceof Player) {
 //            if (isset(Parkour::$plays[strtolower($entity->getName())])) {
-//                $entity->sendMessage(new Text("noWarp", Color::$warning, Text::EXPLAIN));
+//                $entity->sendMessage((string) new Text("noWarp", Color::$warning, Text::EXPLAIN));
 //                $event->setCancelled(true);
 //            }
 //        }
@@ -202,7 +202,7 @@ class EventListener implements Listener {
 
                         default:
                             Parkour::delData($player, "addParkour");
-                            $player->sendMessage(new Text("unknownError", Color::$error, Text::EXPLAIN));
+                            $player->sendMessage((string) new Text("unknownError", Color::$error, Text::EXPLAIN));
                             break;
                     }
                 }

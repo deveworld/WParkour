@@ -25,7 +25,7 @@ class AddParkour extends UIPage {
                         }
                     }
                     if($overLap) {
-                        $player->sendMessage(new Text("alreadyName", Color::$error, Text::EXPLAIN));
+                        $player->sendMessage((string) new Text("alreadyName", Color::$error, Text::EXPLAIN));
                         $this->sendTo($player);
                         return;
                     }
@@ -39,7 +39,7 @@ class AddParkour extends UIPage {
                     Parkour::setData($player, $playerData);
                     $this->sendTo($player, 1);
                 } else {
-                    $player->sendMessage(new Text("addParkour.notValid", Color::$warning, Text::EXPLAIN));
+                    $player->sendMessage((string) new Text("addParkour.notValid", Color::$warning, Text::EXPLAIN));
                     $this->sendTo($player);
                 }
                 break;
@@ -217,7 +217,7 @@ class AddParkour extends UIPage {
                     Parkour::setData($player, $playerData);
                     $this->sendTo($player, 12);
                 } else {
-                    $player->sendMessage(new Text("addParkour.notValid", Color::$warning, Text::EXPLAIN));
+                    $player->sendMessage((string) new Text("addParkour.notValid", Color::$warning, Text::EXPLAIN));
                     $this->sendTo($player, 11);
                 }
                 break;
@@ -291,32 +291,32 @@ class AddParkour extends UIPage {
 
     public function sendTo(Player $player, $id = 0): void {
         $uiData = [];
-        $uiData = $this->setTitle($uiData, new Text("name", Color::$explain, Text::EXPLAIN));
+        $uiData = $this->setTitle($uiData, (string) new Text("name", Color::$explain, Text::EXPLAIN));
         $uiData["buttons"] = [];
         switch($id){
             case 0: // Parkour Name Question
                 $uiData["type"] = "custom_form";
                 $uiData["content"][0]["type"] = "input";
-                $uiData["content"][0]["text"] = (new Text("addParkour.name", Color::$explain, Text::EXPLAIN))->__toString();
+                $uiData["content"][0]["text"] = (string) new Text("addParkour.name", Color::$explain, Text::EXPLAIN);
                 $uiData["content"][0]["default"] = "";
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
                 break;
 
             case 1: // Check Name
                 $uiData["type"] = "form";
                 $playerData = Parkour::getData($player);
                 $parkourName = $playerData["addParkour"]["name"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkName", Color::$explain, Text::NONE, " = $parkourName"))->__toString());
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addContent($uiData, "\n". new Text("addParkour.checkName", Color::$explain, Text::NONE, " = $parkourName"));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 2: // Parkour Set Start Position
                 $uiData["type"] = "form";
-                $uiData = $this->addContent($uiData, new Text("addParkour.start", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.start", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 3: // Check Start Position
@@ -325,17 +325,17 @@ class AddParkour extends UIPage {
                 $x = $playerData["addParkour"]["start"]["x"];
                 $y = $playerData["addParkour"]["start"]["y"];
                 $z = $playerData["addParkour"]["start"]["z"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkStart", Color::$explain, Text::EXPLAIN, " = $x, $y, $z"))->__toString());
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addContent($uiData, "\n". new Text("addParkour.checkStart", Color::$explain, Text::EXPLAIN, " = $x, $y, $z"));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 4: // Parkour Set CheckPoint Position
                 $uiData["type"] = "form";
-                $uiData = $this->addContent($uiData, new Text("addParkour.checkPoint", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.checkPoint", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 5: // Check CheckPoint Position
@@ -345,24 +345,24 @@ class AddParkour extends UIPage {
                 $x = $playerData["addParkour"]["checkPoint"][$n-2]["x"];
                 $y = $playerData["addParkour"]["checkPoint"][$n-2]["y"];
                 $z = $playerData["addParkour"]["checkPoint"][$n-2]["z"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkCheckPoint", Color::$explain, Text::EXPLAIN, " = $x, $y, $z", "{n}", $n-1))->__toString());
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addContent($uiData, "\n".new Text("addParkour.checkCheckPoint", Color::$explain, Text::EXPLAIN, " = $x, $y, $z", "{n}", $n-1));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 6: // Ask More Set CheckPoint
                 $uiData["type"] = "form";
-                $uiData = $this->addContent($uiData, new Text("addParkour.addMore", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.addMore", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 7: // Parkour Set End Position
                 $uiData["type"] = "form";
-                $uiData = $this->addContent($uiData, new Text("addParkour.end", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.end", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 8: // Check End Position
@@ -371,58 +371,58 @@ class AddParkour extends UIPage {
                 $x = $playerData["addParkour"]["end"]["x"];
                 $y = $playerData["addParkour"]["end"]["y"];
                 $z = $playerData["addParkour"]["end"]["z"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkEnd", Color::$explain, Text::EXPLAIN, " = $x, $y, $z"))->__toString());
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addContent($uiData, "\n".new Text("addParkour.checkEnd", Color::$explain, Text::EXPLAIN, " = $x, $y, $z"));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 9: // Parkour Set Floor Position
                 $uiData["type"] = "form";
-                $uiData = $this->addContent($uiData, new Text("addParkour.floor", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.floor", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 10: // Check Floor Position
                 $uiData["type"] = "form";
                 $playerData = Parkour::getData($player);
                 $y = $playerData["addParkour"]["floor"]["y"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkFloor", Color::$explain, Text::EXPLAIN, " = $y"))->__toString());
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addContent($uiData, "\n".new Text("addParkour.checkFloor", Color::$explain, Text::EXPLAIN, " = $y"));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 11: // Parkour Set Reward Money
                 $uiData["type"] = "custom_form";
                 $uiData["content"][0]["type"] = "input";
-                $uiData["content"][0]["text"] = (new Text("addParkour.rewardMoney", Color::$explain, Text::EXPLAIN))->__toString();
+                $uiData["content"][0]["text"] = (string) new Text("addParkour.rewardMoney", Color::$explain, Text::EXPLAIN);
                 $uiData["content"][0]["default"] = "";
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
                 break;
 
             case 12: // Check Reward
                 $uiData["type"] = "form";
                 $playerData = Parkour::getData($player);
                 $money = $playerData["addParkour"]["money"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkMoney", Color::$explain, Text::NONE, " = $money"))->__toString());
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addContent($uiData, "\n".new Text("addParkour.checkMoney", Color::$explain, Text::NONE, " = $money"));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 13: // Parkour Set Again Time
                 $uiData["type"] = "custom_form";
                 $uiData["content"][0]["type"] = "dropdown";
-                $uiData["content"][0]["text"] = (new Text("addParkour.againTime", Color::$explain, Text::EXPLAIN))->__toString();
+                $uiData["content"][0]["text"] = (string) new Text("addParkour.againTime", Color::$explain, Text::EXPLAIN);
                 $options = [];
                 foreach([0, 6, 12, 24, 48, 72] as $k => $i) {
-                    $options[$k] = (new Text("time.h", Color::$explain, Text::EXPLAIN, "", "{h}", $i))->__toString();
+                    $options[$k] = (string) new Text("time.h", Color::$explain, Text::EXPLAIN, "", "{h}", $i);
                 }
                 $uiData["content"][0]["options"] = $options;
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 14: // check Again Time
@@ -431,10 +431,10 @@ class AddParkour extends UIPage {
                 $time = $playerData["addParkour"]["time"];
                 $options = [0, 6, 12, 24, 48, 72];
                 $time = $options[$time];
-                $uiData = $this->addContent($uiData, new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.checkTime", Color::$explain, Text::NONE, " = $time"))->__toString());
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addContent($uiData, "\n".new Text("addParkour.checkTime", Color::$explain, Text::NONE, " = $time"));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 15: // Last check
@@ -444,9 +444,9 @@ class AddParkour extends UIPage {
                 $x = $playerData["addParkour"]["start"]["x"];
                 $y = $playerData["addParkour"]["start"]["y"];
                 $z = $playerData["addParkour"]["start"]["z"];
-                $uiData = $this->addContent($uiData, "\n".(new Text("addParkour.check", Color::$explain, Text::EXPLAIN))->__toString());
-                $uiData = $this->addContent($uiData, new Text("addParkour.checkName", Color::$explain, Text::NONE, " = $parkourName"));
-                $uiData = $this->addContent($uiData, new Text("addParkour.checkStart", Color::$explain, Text::EXPLAIN, " = $x, $y, $z"));
+                $uiData = $this->addContent($uiData, "\n".new Text("addParkour.check", Color::$explain, Text::EXPLAIN));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.checkName", Color::$explain, Text::NONE, " = $parkourName"));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.checkStart", Color::$explain, Text::EXPLAIN, " = $x, $y, $z"));
                 $i = 1;
                 foreach ($playerData["addParkour"]['checkPoint'] as $key => $value) {
                     if($key == "select") {
@@ -455,31 +455,31 @@ class AddParkour extends UIPage {
                     $x = $value['x'];
                     $y = $value["y"];
                     $z = $value['z'];
-                    $uiData = $this->addContent($uiData, new Text("addParkour.checkCheckPoint", Color::$explain, Text::EXPLAIN, " = $x, $y, $z", "{n}", $i));
+                    $uiData = $this->addContent($uiData, (string) new Text("addParkour.checkCheckPoint", Color::$explain, Text::EXPLAIN, " = $x, $y, $z", "{n}", $i));
                     $i++;
                 }
                 $x = $playerData["addParkour"]["end"]["x"];
                 $y = $playerData["addParkour"]["end"]["y"];
                 $z = $playerData["addParkour"]["end"]["z"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.checkEnd", Color::$explain, Text::EXPLAIN, " = $x, $y, $z"));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.checkEnd", Color::$explain, Text::EXPLAIN, " = $x, $y, $z"));
                 $y = $playerData["addParkour"]["floor"]["y"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.checkFloor", Color::$explain, Text::EXPLAIN, " = $y"));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.checkFloor", Color::$explain, Text::EXPLAIN, " = $y"));
                 $money = $playerData["addParkour"]["money"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.checkMoney", Color::$explain, Text::NONE, " = $money"));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.checkMoney", Color::$explain, Text::NONE, " = $money"));
                 $time = $playerData["addParkour"]["time"];
                 $options = [0, 6, 12, 24, 48, 72];
                 $time = $options[$time];
-                $uiData = $this->addContent($uiData, new Text("addParkour.checkTime", Color::$explain, Text::NONE, " = $time"));
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
-                $uiData = $this->addButton($uiData, new Text("cancel", Color::$warning, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.checkTime", Color::$explain, Text::NONE, " = $time"));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addButton($uiData, (string) new Text("cancel", Color::$warning, Text::BUTTON));
                 break;
 
             case 16:
                 $uiData["type"] = "form";
                 $playerData = Parkour::getData($player);
                 $parkourName = $playerData["addParkour"]["name"];
-                $uiData = $this->addContent($uiData, new Text("addParkour.done", Color::$explain, Text::EXPLAIN, "", "{name}", $parkourName));
-                $uiData = $this->addButton($uiData, new Text("ok", Color::$button, Text::BUTTON));
+                $uiData = $this->addContent($uiData, (string) new Text("addParkour.done", Color::$explain, Text::EXPLAIN, "", "{name}", $parkourName));
+                $uiData = $this->addButton($uiData, (string) new Text("ok", Color::$button, Text::BUTTON));
                 break;
         }
         $ui = new ModalFormRequestPacket();

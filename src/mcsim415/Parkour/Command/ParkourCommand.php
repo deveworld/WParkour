@@ -23,7 +23,7 @@ class ParkourCommand implements CommandExecutor {
     function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         if($command->getName() == "parkour"){
             if(!$sender instanceof Player) {
-                $sender->sendMessage(new Text("pleaseInGame", Text::getTranslatedString("warning"), Text::EXPLAIN));
+                $sender->sendMessage((string) new Text("pleaseInGame", Text::getTranslatedString("warning"), Text::EXPLAIN));
             } else {
                 if (isset(Parkour::$plays[strtolower($sender->getName())])){
                     $player = $sender;
@@ -32,7 +32,7 @@ class ParkourCommand implements CommandExecutor {
                     $player->teleport($playerData["location"]);
                     Parkour::delData($player);
                     Parkour::delPlay($player);
-                    $player->sendMessage(new Text("giveUp", Color::$explain, Text::EXPLAIN));
+                    $player->sendMessage((string) new Text("giveUp", Color::$explain, Text::EXPLAIN));
                 } else {
                     if($sender->hasPermission(DefaultPermissions::ROOT_OPERATOR)) { // TODO: SHOULD CHANGE PERMISSION
                         UIPage::getPageByName("admin", "SelWork")->sendTo($sender);

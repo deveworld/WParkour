@@ -16,9 +16,9 @@ class DelParkour extends UIPage {
         $parkour = Parkour::getParkour();
         if(!empty($parkour) && isset($parkour[$response])) {
             if(Parkour::delParkour($response)) {
-                $player->sendMessage(new Text("deletedParkour", Color::$explain, Text::EXPLAIN));
+                $player->sendMessage((string) new Text("deletedParkour", Color::$explain, Text::EXPLAIN));
             } else {
-                $player->sendMessage(new Text("errorDelete", Color::$error, Text::EXPLAIN));
+                $player->sendMessage((string) new Text("errorDelete", Color::$error, Text::EXPLAIN));
             }
         }
     }
@@ -26,17 +26,17 @@ class DelParkour extends UIPage {
     public function sendTo(Player $player, $id = 0) : void{
         $uiData = [];
         $uiData["type"] = "form";
-        $uiData = $this->setTitle($uiData, new Text("name", Color::$explain, Text::EXPLAIN));
+        $uiData = $this->setTitle($uiData, (string) new Text("name", Color::$explain, Text::EXPLAIN));
         $parkour = Parkour::getParkour();
         $uiData["buttons"] = [];
         if(empty($parkour)) {
-            $uiData = $this->addContent($uiData, new Text("empty", Color::$explain, Text::EXPLAIN));
-            $uiData = $this->addButton($uiData, new Text("close", Color::$warning, Text::BUTTON));
+            $uiData = $this->addContent($uiData, (string) new Text("empty", Color::$explain, Text::EXPLAIN));
+            $uiData = $this->addButton($uiData, (string) new Text("close", Color::$warning, Text::BUTTON));
         } else {
-            $uiData = $this->addContent($uiData, new Text("selectParkourDel", Color::$explain, Text::EXPLAIN));
+            $uiData = $this->addContent($uiData, (string) new Text("selectParkourDel", Color::$explain, Text::EXPLAIN));
             foreach($parkour as $value) {
                 $name = $value["name"];
-                $uiData = $this->addButton($uiData, new Text($name, Color::$button, Text::BUTTON,"", "", "", false));
+                $uiData = $this->addButton($uiData, (string) new Text($name, Color::$button, Text::BUTTON,"", "", "", false));
             }
         }
         $ui = new ModalFormRequestPacket();

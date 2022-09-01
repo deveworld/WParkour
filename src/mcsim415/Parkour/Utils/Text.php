@@ -3,6 +3,7 @@
 namespace mcsim415\Parkour\Utils;
 
 use mcsim415\Parkour\Parkour;
+use pocketmine\lang\Translatable;
 
 class Text {
     public const TRANSLATE_PREFIX = "parkour.";

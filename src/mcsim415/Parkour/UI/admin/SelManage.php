@@ -32,12 +32,12 @@ class SelManage extends UIPage {
     public function sendTo(Player $player, $id = self::FORM_ID): void {
         $uiData = [];
         $uiData["type"] = "form";
-        $uiData = $this->setTitle($uiData, new Text("name", Color::$explain, Text::EXPLAIN));
-        $uiData = $this->addContent($uiData, new Text("selectWork", Color::$explain, Text::EXPLAIN));
+        $uiData = $this->setTitle($uiData, (string) new Text("name", Color::$explain, Text::EXPLAIN));
+        $uiData = $this->addContent($uiData, (string) new Text("selectWork", Color::$explain, Text::EXPLAIN));
         $uiData["buttons"] = [];
-        $uiData = $this->addButton($uiData, new Text("addParkour", Color::$button, Text::BUTTON));
-        $uiData = $this->addButton($uiData, new Text("delParkour", Color::$warning, Text::BUTTON));
-        $uiData = $this->addButton($uiData, new Text("close", Color::$warning, Text::BUTTON));
+        $uiData = $this->addButton($uiData, (string) new Text("addParkour", Color::$button, Text::BUTTON));
+        $uiData = $this->addButton($uiData, (string) new Text("delParkour", Color::$warning, Text::BUTTON));
+        $uiData = $this->addButton($uiData, (string) new Text("close", Color::$warning, Text::BUTTON));
         $ui = new ModalFormRequestPacket();
         $ui->formId = self::FORM_ID;
         $ui->formData = json_encode($uiData);

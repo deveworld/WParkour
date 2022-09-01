@@ -42,7 +42,7 @@ class Parkour extends PluginBase implements Listener {
         }
     }
 
-    public static function getInstance() {
+    public static function getInstance() : Parkour {
         return static::$instance;
     }
 
@@ -135,10 +135,10 @@ class Parkour extends PluginBase implements Listener {
             self::$db["data"][] = $playerData["addParkour"];
             $parkourName = $playerData["addParkour"]["name"];
             self::delData($player, "addParkour");
-            $player->sendMessage(new Text("addParkour.done", Color::$explain, Text::EXPLAIN, "", "{name}", $parkourName));
+            $player->sendMessage((string) new Text("addParkour.done", Color::$explain, Text::EXPLAIN, "", "{name}", $parkourName));
             return true;
         } else {
-            $player->sendMessage(new Text("unknownError", Color::$error, Text::EXPLAIN));
+            $player->sendMessage((string) new Text("unknownError", Color::$error, Text::EXPLAIN));
             return false;
         }
     }

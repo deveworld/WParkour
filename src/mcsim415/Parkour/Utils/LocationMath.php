@@ -34,7 +34,7 @@ class LocationMath {
         $playerData = Parkour::getData($player);
         $parkour = Parkour::getParkour()[$playerData["parkour"]];
         if($level) {
-            $level = Parkour::getInstance()->getServer()->getLevelByName($parkour["world"]);
+            $level = Parkour::getInstance()->getServer()->getWorldManager()->getWorldByName($parkour["world"]);
         } else {
             $level = $player->getWorld();
         }
