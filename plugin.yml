@@ -13,9 +13,9 @@ commands:
   parkour:
     description: Parkour command
     usage: "/parkour"
-    permission: parkour.command.parkour
+    permission: wparkour.command.parkour
 
 permissions:
-  parkour.command.parkour:
+  wparkour.command.parkour:
     default: true
 ...
