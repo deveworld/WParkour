@@ -1,4 +1,4 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/mcsim415/Parkour
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/deveworld/Parkour
 build-by-default: true
 branches:
 - main
