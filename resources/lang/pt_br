@@ -1,0 +1,66 @@
+; Portuguese
+
+; color
+parkour.prefix = "6"
+parkour.explain = "a"
+parkour.button = "b"
+parkour.warning = "c"
+parkour.error = "4"
+
+; word
+parkour.name = "Parkour"
+parkour.manage = "Gerenciar"
+parkour.play = "Jogar"
+parkour.ok = "Confirmar"
+parkour.cancel = "Cancelar"
+parkour.close = "Fechar"
+parkour.addParkour = "Adicionar Parkour"
+parkour.delParkour = "Deletar Parkour"
+
+; time
+parkour.time.h = "{h} houra(s)"
+parkour.time.i = "{i} minuto(s)"
+parkour.time.s = "{s} segundo(s)"
+
+; sentence
+parkour.selectWork = "Escolha o que vai fazer"
+parkour.selectParkourPlay = "Selecione o parkour para jogar"
+parkour.reachCheckPoint = "Você atingiu o {n}º checkpoint!"
+parkour.clear = "Parabéns, você completou o parkour {name}!"
+parkour.selectParkourDel = "Selecione um parkour a ser deletado"
+parkour.deletedParkour = "Parkour deletado com sucesso!"
+parkour.entrance = "Você está participando do parkour {name}."
+parkour.out = "Digite o comando "/parkour" para desistir do parkour."
+parkour.giveUp = "Você desistiu do parkour e voltou. Isso está ok. Tente novamente mais tarde!"
+
+; error, warning
+parkour.pleaseInGame = "Por favor, execute-o no jogo."
+parkour.unknownError = "Ocorreu um erro inesperado."
+parkour.empty = "Nenhum parkour foi adicionado."
+parkour.noWorld = "O mundo não existe."
+parkour.timeLater = "Você não pode tentar novamente. Por favor, tente novamente após aproximadamente {time}."
+parkour.errorDelete = "Falha ao deletar parkour."
+parkour.alreadyName = "O nome já existe. Por favor, tente com um nome diferente."
+parkour.noWarp = "Você não pode se teletransportar enquanto tenta parkour."
+parkour.reachAll = "Você deve estar em todos os checkpoints."
+
+; addParkour
+parkour.addParkour.check = "Por favor, verifique novamente se digitou corretamente."
+parkour.addParkour.notValid = "Por favor, insira todos os espaços em branco corretamente sem esvaziá-los."
+parkour.addParkour.name = "Por favor, digite o nome do parkour que deseja adicionar."
+parkour.addParkour.start = "Por favor, clique no ponto inicial. (para quebrar o bloco)"
+parkour.addParkour.checkPoint = "Por favor, clique no checkpoint. (para quebrar o bloco)"
+parkour.addParkour.addMore = "Deseja adicionar mais pontos de verificação?"
+parkour.addParkour.end = "Por favor, clique no ponto final. (para quebrar o bloco)"
+parkour.addParkour.floor = "Por favor, clique no bloco do andar. (para quebrar o bloco)"
+parkour.addParkour.rewardMoney = "Por favor, insira a recompensa para o parkour que você adicionou. (API Economy necessária)"
+parkour.addParkour.againTime = "Por favor, defina um horário em que você pode receber a recompensa novamente após quebrar o parkour adicionado."
+parkour.addParkour.checkName = "Nome do Parque"
+parkour.addParkour.checkStart = "Posição inicial do estacionamento"
+parkour.addParkour.checkCheckPoint = "{n}º ponto de verificação"
+parkour.addParkour.checkEnd = "Posição final do estacionamento"
+parkour.addParkour.checkFloor = "Posição do piso de estacionamento"
+parkour.addParkour.checkMoney = "Parkour Reward Money"
+parkour.addParkour.checkTime = "Tempo de espera da recompensa de estacionamento"
+parkour.addParkour.done = "A adição de {name} está concluída."
+parkour.addParkour.continue = "Há um parkour que eu estava adicionando antes. Deseja continuar?"
