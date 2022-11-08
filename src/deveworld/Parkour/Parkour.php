@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace mcsim415\Parkour;
+namespace deveworld\Parkour;
 
 use JsonException;
-use mcsim415\Parkour\Command\ParkourCommand;
-use mcsim415\Parkour\Event\EventListener;
-use mcsim415\Parkour\Task\ParkourTask;
-use mcsim415\Parkour\UI\UIPage;
-use mcsim415\Parkour\Utils\Color;
-use mcsim415\Parkour\Utils\Text;
+use deveworld\Parkour\Command\ParkourCommand;
+use deveworld\Parkour\Event\EventListener;
+use deveworld\Parkour\Task\ParkourTask;
+use deveworld\Parkour\UI\UIPage;
+use deveworld\Parkour\Utils\Color;
+use deveworld\Parkour\Utils\Text;
 use pocketmine\event\Listener;
 use pocketmine\lang\Language;
 use pocketmine\player\Player;

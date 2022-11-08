@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/mcsim415/WParkour/main/parkour.png"></img></BR>
+<img src="https://raw.githubusercontent.com/deveworld/WParkour/main/parkour.png"></img></BR>
 # WParkour
 
 ### Command
@@ -47,4 +47,4 @@ Enjoy!
 ### Translate
 If this plugin doesn't have your language, you can add your language!
 
-Read more about this <a href="https://github.com/mcsim415/WParkour/wiki/Translate-plugin">here</a>.
+Read more about this <a href="https://github.com/deveworld/WParkour/wiki/Translate-plugin">here</a>.

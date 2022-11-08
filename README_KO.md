@@ -1,7 +1,7 @@
-<img src="https://raw.githubusercontent.com/mcsim415/WParkour/main/parkour.png"></img></BR>
+<img src="https://raw.githubusercontent.com/deveworld/WParkour/main/parkour.png"></img></BR>
 # WParkour
 <p style="text-align: right">  
-    <a href="https://github.com/mcsim415/WParkour/">  
+    <a href="https://github.com/deveworld/WParkour/">  
         <img alt="download" src="https://img.shields.io/static/v1?label=English&message=README&labelColor=success">  
     </a>  
     <a href="https://poggit.pmmp.io/p/WParkour/1.1">
@@ -11,7 +11,7 @@
 
 ### 다운로드
 <a href="https://poggit.pmmp.io/p/WParkour/1.1">Poggit 에서 안정 버전 다운로드하기</a> </BR>
-<a href="https://github.com/mcsim415/WParkour/releases/download/WParkour/WParkour.phar">깃허브에서 최신 다운로드하기 (불안정할 수 있습니다.)</a>
+<a href="https://github.com/deveworld/WParkour/releases/download/WParkour/WParkour.phar">깃허브에서 최신 다운로드하기 (불안정할 수 있습니다.)</a>
 
 ## 설명
 ### - 명령어
@@ -44,4 +44,4 @@
 
 ### Translate
 만약 플러그인이 원하는 언어를 지원하지 않을경우, 당신이 추가할 수 있습니다!</BR>
-<a href="https://github.com/mcsim415/WParkour/wiki/Translate-plugin">여기서</a> 더 자세히 알아보세요.
+<a href="https://github.com/deveworld/WParkour/wiki/Translate-plugin">여기서</a> 더 자세히 알아보세요.

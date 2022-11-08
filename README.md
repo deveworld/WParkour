@@ -1,7 +1,7 @@
-<img src="https://raw.githubusercontent.com/mcsim415/WParkour/main/parkour.png"></img></BR>
+<img src="https://raw.githubusercontent.com/deveworld/WParkour/main/parkour.png"></img></BR>
 # WParkour
 <p style="text-align: right">
-    <a href="https://github.com/mcsim415/WParkour/blob/main/README_KO.md">  
+    <a href="https://github.com/deveworld/WParkour/blob/main/README_KO.md">  
         <img alt="download" src="https://img.shields.io/static/v1?label=%ED%95%9C%EA%B5%AD%EC%96%B4%EB%A1%9C&message=%EC%9D%BD%EA%B8%B0&labelColor=success">  
     </a>  
     <a href="https://poggit.pmmp.io/p/WParkour/1.1">
@@ -11,7 +11,7 @@
 
 ## Download
 <a href="https://poggit.pmmp.io/p/WParkour/1.1">Download stable version in Poggit.</a></BR>
-<a href="https://github.com/mcsim415/WParkour/releases/download/WParkour/WParkour.phar">Pre-release Download in GitHub. (It may be unstable)</a>
+<a href="https://github.com/deveworld/WParkour/releases/download/WParkour/WParkour.phar">Pre-release Download in GitHub. (It may be unstable)</a>
 
 ## Description
 ### - Command
@@ -43,7 +43,7 @@ Enjoy! </BR></BR>
 
 ### Translate
 If this plugin doesn't have your language, you can add your language!</BR>
-Read more about this <a href="https://github.com/mcsim415/WParkour/wiki/Translate-plugin">here</a>.
+Read more about this <a href="https://github.com/deveworld/WParkour/wiki/Translate-plugin">here</a>.
 
 ## Notice
 This plugin moved to here from <a href="https://web.archive.org/web/20210808110601if_/https://github.com/Blugin/Parkour">here</a>

@@ -1,14 +1,14 @@
 <?php
-namespace mcsim415\Parkour\UI\all;
+namespace deveworld\Parkour\UI\all;
 
-use mcsim415\Parkour\Parkour;
-use mcsim415\Parkour\Utils\Color;
-use mcsim415\Parkour\Utils\Text;
+use deveworld\Parkour\Parkour;
+use deveworld\Parkour\Utils\Color;
+use deveworld\Parkour\Utils\Text;
 use pocketmine\entity\Location;
 use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
 use pocketmine\player\GameMode;
 use pocketmine\player\Player;
-use mcsim415\Parkour\UI\UIPage;
+use deveworld\Parkour\UI\UIPage;
 
 class Play extends UIPage {
     public const FORM_ID = 18321003;

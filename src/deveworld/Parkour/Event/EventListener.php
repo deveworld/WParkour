@@ -1,12 +1,12 @@
 <?php
 
-namespace mcsim415\Parkour\Event;
+namespace deveworld\Parkour\Event;
 
-use mcsim415\Parkour\Parkour;
-use mcsim415\Parkour\UI\UIPage;
-use mcsim415\Parkour\Utils\Color;
-use mcsim415\Parkour\Utils\LocationMath;
-use mcsim415\Parkour\Utils\Text;
+use deveworld\Parkour\Parkour;
+use deveworld\Parkour\UI\UIPage;
+use deveworld\Parkour\Utils\Color;
+use deveworld\Parkour\Utils\LocationMath;
+use deveworld\Parkour\Utils\Text;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;

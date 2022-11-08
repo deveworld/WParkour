@@ -1,6 +1,6 @@
 <?php
 
-namespace mcsim415\Parkour\Utils;
+namespace deveworld\Parkour\Utils;
 
 
 class Color{

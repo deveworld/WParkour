@@ -1,11 +1,11 @@
 ---
 name: WParkour
-main: mcsim415\Parkour\Parkour
+main: deveworld\Parkour\Parkour
 version: 1.1
 api: [ 4.0.0 ]
-author: World # = mcsim415
+author: World # =deveworld
 description: Parkour Plugin
-mcpe-protocol: [527, 534, 544, 545] # 1.19 ~ 1.19.21
+mcpe-protocol: [527, 534, 544, 545, 554, 557] # 1.19 ~ 1.19.41
 softdepend :
   - EconomyAPI
 

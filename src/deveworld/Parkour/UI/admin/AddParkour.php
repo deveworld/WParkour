@@ -1,11 +1,11 @@
 <?php
 
-namespace mcsim415\Parkour\UI\admin;
+namespace deveworld\Parkour\UI\admin;
 
-use mcsim415\Parkour\Parkour;
-use mcsim415\Parkour\UI\UIPage;
-use mcsim415\Parkour\Utils\Color;
-use mcsim415\Parkour\Utils\Text;
+use deveworld\Parkour\Parkour;
+use deveworld\Parkour\UI\UIPage;
+use deveworld\Parkour\Utils\Color;
+use deveworld\Parkour\Utils\Text;
 use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
 use pocketmine\player\Player;
 

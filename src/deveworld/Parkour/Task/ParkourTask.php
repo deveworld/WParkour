@@ -1,11 +1,11 @@
 <?php
 
-namespace mcsim415\Parkour\Task;
+namespace deveworld\Parkour\Task;
 
-use mcsim415\Parkour\Parkour;
-use mcsim415\Parkour\Utils\Color;
-use mcsim415\Parkour\Utils\LocationMath;
-use mcsim415\Parkour\Utils\Text;
+use deveworld\Parkour\Parkour;
+use deveworld\Parkour\Utils\Color;
+use deveworld\Parkour\Utils\LocationMath;
+use deveworld\Parkour\Utils\Text;
 use pocketmine\scheduler\Task;
 
 class ParkourTask extends Task {

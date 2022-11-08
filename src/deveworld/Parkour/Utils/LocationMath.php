@@ -1,8 +1,8 @@
 <?php
 
-namespace mcsim415\Parkour\Utils;
+namespace deveworld\Parkour\Utils;
 
-use mcsim415\Parkour\Parkour;
+use deveworld\Parkour\Parkour;
 use pocketmine\world\World;
 use pocketmine\entity\Location;
 use pocketmine\math\Vector3;

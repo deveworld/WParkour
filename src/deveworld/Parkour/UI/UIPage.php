@@ -1,15 +1,15 @@
 <?php
 
-namespace mcsim415\Parkour\UI;
+namespace deveworld\Parkour\UI;
 
-use mcsim415\Parkour\Parkour;
-use mcsim415\Parkour\UI\admin\AddParkour;
-use mcsim415\Parkour\UI\admin\ContinueAdd;
-use mcsim415\Parkour\UI\admin\DelParkour;
-use mcsim415\Parkour\UI\admin\SelManage;
-use mcsim415\Parkour\UI\admin\SelWork;
-use mcsim415\Parkour\Utils\Text;
-use mcsim415\Parkour\UI\all\Play;
+use deveworld\Parkour\Parkour;
+use deveworld\Parkour\UI\admin\AddParkour;
+use deveworld\Parkour\UI\admin\ContinueAdd;
+use deveworld\Parkour\UI\admin\DelParkour;
+use deveworld\Parkour\UI\admin\SelManage;
+use deveworld\Parkour\UI\admin\SelWork;
+use deveworld\Parkour\Utils\Text;
+use deveworld\Parkour\UI\all\Play;
 use pocketmine\player\Player;
 
 abstract class UIPage {
